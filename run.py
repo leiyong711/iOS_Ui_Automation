@@ -6,7 +6,7 @@
 # Email: leiyong711@163.com
 
 import HTMLTestRunnertest
-from TestCase.testCase_login import *
+from TestCase.testCase_001_login import *
 
 if __name__ == '__main__':
     # suite = unittest.TestSuite()
@@ -24,10 +24,10 @@ if __name__ == '__main__':
         stream=fp,
         title='Appium自动化测试结果(iOS)',
         description='iOS 自动化测试报告',
-        tester='怼张丽中的最棒QA'
+        tester='最棒QA'
     )
     runner.run(suite)
-    ass = HTMLTestRunnertestxiugai.leiyong123  # 获取HTMLTestRunner.leiyong123返回的用例执行数量与结果
+    ass = HTMLTestRunnertest.leiyong123  # 获取HTMLTestRunner.leiyong123返回的用例执行数量与结果
     fp.close()                       # 测试报告关闭
     # Excel(ass)                       # 调用生成测试信息Excel
     # time.sleep(5)                    # 延时5秒

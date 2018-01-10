@@ -19,7 +19,7 @@ def mk():
     sender = 'leiyong711@aliyun.com'  # 发件人1804882096@qq.com
     receivers = 'leiyonghn@163.com'  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱leiyong711@163.com
     receivers1 = 'leiyong711@163.com'
-    my_pass = ''  # 授权码'
+    my_pass = 'leiyong711'  # 授权码'ibiaowujreplcbhf'
 
     # 创建一个带附件的实例
     message = MIMEMultipart()

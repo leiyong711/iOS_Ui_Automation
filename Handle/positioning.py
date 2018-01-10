@@ -9,7 +9,7 @@ import time
 import sys
 import os
 from time import sleep
-from server import server
+from AppiumServer.server import server
 A = server()
 
 reload(sys)

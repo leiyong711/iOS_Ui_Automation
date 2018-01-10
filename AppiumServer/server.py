@@ -21,7 +21,7 @@ d.get_ios_devices()
 # 获取config配置文件
 def getConfig(section, key):
     config = ConfigParser.ConfigParser()
-    path = '../Config/app.conf'
+    path = 'Config/app.conf'
     config.read(path)
     return config.get(section, key)
 
@@ -30,6 +30,7 @@ def getConfig(section, key):
 class server:
 
     def __init__(self):
+        desired_caps = {}
         desired_caps['platformName'] = getConfig("phoneConf", "platformName")
         desired_caps['platformVersion'] = getConfig("phoneConf", "platformVersion")
         desired_caps['deviceName'] = getConfig("phoneConf", "deviceName")

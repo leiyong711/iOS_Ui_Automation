@@ -15,11 +15,12 @@ import os
 class getApp:
 
     def __init__(self):
-        filenames = os.listdir('../Apps')
+        filenames = os.listdir('Apps/')
+        print filenames
         for i in range(len(filenames)):
             num = re.search(r'\.ipa$', filenames[i])
             if num:
-                self.ipa_path = '../Apps/%s' % num.string
+                self.ipa_path = 'Apps/%s' % num.string
                 # appLocation = num.string
                 # print appLocation
 
@@ -37,7 +38,7 @@ class getApp:
 
         x = ["applicationName = %s \nfileSize = %s \napplicationVersion = %s \nbundleId = %s\n" %
              (plist_root['CFBundleName'],fileSize, plist_root['CFBundleShortVersionString'], plist_root['CFBundleIdentifier'])]
-        with open("../config/app.conf", "w+") as f:  # 写出应用配置信息
+        with open("config/app.conf", "w+") as f:  # 写出应用配置信息
             f.write("[baseconf]\n")
             for i in x:
                 f.write(i)

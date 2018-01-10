@@ -28,7 +28,7 @@ class Device:
     @staticmethod
     def get_ios_devices():
         output = Shell.invoke('idevice_id -l')
-        config_file = '../Config/ios_mapping.json'
+        config_file = 'Config/ios_mapping.json'
         with open(config_file, 'r') as f:
             config = json.loads(f.read())
 
@@ -58,7 +58,7 @@ class Device:
 
         x = ["brand = %s\nmodel = %s\ndeviceName = %s\nplatformVersion = %s\nudid = %s\nplatformName = iOS"
              % (doc['brand'], doc['model'], doc['deviceName'], doc['platformVersion'], doc['udid'])]
-        with open("../config/app.conf", "a") as f:  # 写出应用配置信息
+        with open("Config/app.conf", "a") as f:  # 写出应用配置信息
             f.write("\n[phoneConf]\n")
             for i in x:
                 f.write(i)
